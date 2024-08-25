@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squadron Applications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Squadron Applications</h1>
+        <br>
+        <form id="applicationForm" autocomplete="off">
+            <label for="discordUsername">Discord Username:</label>
+            <input type="text" id="discordUsername" name="discordUsername" required><br><br>
+        
+            <label for="inGameUsername">In-Game Username:</label>
+            <input type="text" id="inGameUsername" name="inGameUsername" required><br><br>
+        
+            <label for="squadron">Squadron:</label>
+            <select id="squadron" name="squadron" required>
+                <option value="TWIX">TWIX</option>
+                <option value="MLKY">MLKY</option>
+            </select><br><br>
+        
+            <button type="submit">Apply</button>
+        </form>        
+
+        <p id="status"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
