@@ -193,12 +193,20 @@ h1 {
     width: 100%;
     max-width: 400px;
     text-align: center;
+    position: relative;
+}
+
+.links-section a span {
+    flex-grow: 1;
 }
  
-
 .links-section a:hover {
     background-color: #45a049;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.links-section a img {
+    margin-right: 10px; 
 }
 
 label {
@@ -209,7 +217,20 @@ label {
 .icon {
     width: 26px;
     height: 26px;
-    margin-right: 8px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.link-content span {
+    margin: 0 auto;
+    text-align: center;
+    flex-grow: 1;
 }
 
 input[type="text"], select {
