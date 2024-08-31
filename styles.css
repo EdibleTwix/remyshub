@@ -363,8 +363,8 @@ body {
 
 .hint-icon {
     position: absolute;
-    top: 100px;
-    right: 10px;
+    top: 95px;
+    right: 5px;
     font-size: 0.8em;
     cursor: pointer;
     vertical-align: middle;
@@ -522,7 +522,7 @@ body {
     .hint-icon {
         position: absolute;
         top: 80px;
-        right: 12px;
+        right: 8px;
         font-size: 0.8em;
         cursor: pointer;
         vertical-align: middle;
