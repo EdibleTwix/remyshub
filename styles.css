@@ -322,7 +322,32 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
+}
+
+.squadron-membership {
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0px;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0px;
 }
 
 .squadron {
@@ -331,10 +356,9 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 358px;
     max-width: 100%;
     text-align: left; 
-    margin-bottom: 20px;
 }
 
 .squadron h3 {
@@ -376,8 +400,12 @@ body {
     padding: 30px;
     background-color: #2B2D31;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 880px;
+    box-sizing: border-box;
 }
+
 
 /* FOOTER */
 .footer {
@@ -467,11 +495,15 @@ body {
         display: flex;
         flex-wrap: wrap;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 10px;
+        gap: 20px;
         padding: 200px;
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
+    }
+
+    .squadron-container {
+        gap: 0px;
     }
     
     .member {
@@ -480,8 +512,8 @@ body {
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         text-align: center;
-        width: 130px;
-        height: 130px;
+        width: 135px;
+        height: 135px;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
@@ -528,7 +560,30 @@ body {
         vertical-align: middle;
     }
 
+    .hint-box {
+        width: 100%;
+    }
+
+    .squadron {
+        position: relative;
+        background-color: #2B2D31;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 330px;
+        max-width: 100%;
+        text-align: left; 
+        margin-bottom: 20px;
+    }
+
     .about-us-section {
-        padding: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
     }
 }
