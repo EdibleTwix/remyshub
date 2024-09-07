@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Team | Remy's HUB</title>
+    <link rel="icon" href="squadrons.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+
+        <div class="background"></div>
+
+        <meta property="og:title" content="Staff Team | Remy's HUB">
+        <meta property="og:description" content="Discover information about TWIX, MLKY, MARZ, BNTY squadrons and how to join.">
+        <meta property="og:image" content="https://edibletwix.github.io/squadrons.png">
+        <meta property="og:url" content="https://edibletwix.github.io/staff_team">
+        <meta property="og:type" content="website">
+
+        <div class="header-container">
+            <img src="squadrons.png" alt="Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="squadron_information.html">Squadron Information</a></li>
+                    <li class="dropdown">
+                        <a href="how_to_apply.html" class="active" class="dropbtn">How To Apply</a>
+                        <!--<div class="dropdown-content">
+                            <a href="squadron_membership.html">Squadron Membership</a>
+                            <a href="staff_team.html">Staff Team</a>
+                        </div>-->
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!------------------------------------------------------------------------------------------>
+
+<!--
+    <div class="container">
+        <h1>Staff Team</h1>
+        <p>Coming Soon.</p>
+    </div>
+-->
+
+<div id="footer-container"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+    
+</body>
+</html>
