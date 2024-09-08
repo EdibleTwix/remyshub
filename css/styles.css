@@ -506,6 +506,23 @@ button:hover {
     box-sizing: border-box;
 }
 
+.discord-link {
+    text-decoration: none; 
+    color: #dddddd !important;
+    display: inline-block;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #3A406E;
+    border-radius: 5px;
+    font-size: inherit;
+}
+
+.discord-link:hover {
+    background-color: #5865F2;
+}
+
+
 /* FOOTER */
 .footer {
     color: #dddddd;
