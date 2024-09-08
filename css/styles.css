@@ -175,7 +175,7 @@ h1 {
 }
 
 .notice-box {
-    background-color: #F9F871;
+    background-color: #ffff90;
     color: #000000;
     cursor: pointer;
     max-height: 50px;
@@ -191,7 +191,7 @@ h1 {
     right: 0;
     margin: 0 auto;
     padding: 20px 250px;
-    background-color: #F9F871;
+    background-color: #ffff90;
     color: #000000;
     z-index: 2;
     width: calc(100% - 500px);
