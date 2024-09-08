@@ -510,9 +510,8 @@ button:hover {
     text-decoration: none; 
     color: #dddddd !important;
     display: inline-block;
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    height: 20px;
+    padding: 5px;
     background-color: #3A406E;
     border-radius: 5px;
     font-size: inherit;
