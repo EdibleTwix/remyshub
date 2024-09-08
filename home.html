@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Remy's HUB</title>
+    <link rel="icon" href="images/squadrons.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <header>
+
+        <meta property="og:title" content="Home | Remy's HUB">
+        <meta property="og:description" content="Discover information about TWIX, MLKY, MARZ, BNTY squadrons and how to join.">
+        <meta property="og:image" content="https://edibletwix.github.io/images/squadrons.png">
+        <meta property="og:url" content="https://edibletwix.github.io/home">
+        <meta property="og:type" content="website">
+
+        <div class="header-container">
+            <img src="images/squadrons.png" alt="Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="squadron_information.html">Squadron Information</a></li>
+                    <li class="dropdown">
+                        <a href="how_to_apply.html" class="dropbtn">How To Apply</a>
+                        <!--<div class="dropdown-content">
+                            <a href="squadron_membership.html">Squadron Membership</a>
+                            <a href="staff_team.html">Staff Team</a>
+                        </div>-->
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to Remy's HUB!</h1>
+
+        <div class="hint-box" style="text-align: center;">
+            <h2>About</h2>
+            <p>This is the home page for TWIX, MLKY, MARZ, and BNTY squadrons on War Thunder. Learn more about our squadrons, apply for squadron membership, meet our staff, or simply get in touch with us!</p><br>
+        </div>
+    
+        <h1>War Thunder Links</h1>
+        <div class="links-section">
+            <a href="https://wiki.warthunder.com/Main_Page" target="_blank">
+                <div class="link-content">
+                    <img src="images/open_in_new.png" alt="Open" class="icon">
+                    <span>War Thunder Wiki</span>
+                </div>
+            </a>
+            <a href="https://warthunder.com/us/news" target="_blank">
+                <div class="link-content">
+                    <img src="images/open_in_new.png" alt="Open" class="icon">
+                    <span>War Thunder News</span>
+                </div>
+            </a>
+            <a href="https://store.gaijin.net" target="_blank">
+                <div class="link-content">
+                    <img src="images/open_in_new.png" alt="Open" class="icon">
+                    <span>Gaijin Store</span>
+                </div>
+            </a>
+            <a href="https://trade.gaijin.net" target="_blank">
+                <div class="link-content">
+                    <img src="images/open_in_new.png" alt="Open" class="icon">
+                    <span>Gaijin Market</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        });
+    </script>
+          
+</body>
+</html>
