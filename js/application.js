@@ -19,7 +19,7 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     .then(response => response.text())
     .then(result => {
         const statusElement = document.getElementById('status');
-        statusElement.innerText = 'Your application has been submitted successfully! We’ll review it in a few days.';
+        statusElement.innerText = 'Your application has been successfully submitted! Please check your direct messages on Discord for updates on your application status. Make sure your direct messages are open to receive notifications.';
         statusElement.style.color = 'rgb(76, 175, 80)';
 
         document.getElementById('applicationForm').reset();
@@ -31,7 +31,7 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     .catch(error => {
         console.error('Error:', error);
         const statusElement = document.getElementById('status');
-        statusElement.innerText = 'There was an error submitting your application. Please try again, or create a ticket on the Discord server.';
+        statusElement.innerText = 'There was an error submitting your application. Please try again, or create a ticket on the Discord server regarding this issue.';
         statusElement.style.color = 'red';
 
         setTimeout(() => {
