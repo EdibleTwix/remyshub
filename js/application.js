@@ -19,7 +19,7 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     .then(response => response.text())
     .then(result => {
         const statusElement = document.getElementById('status');
-        statusElement.innerText = 'Your application is pending verification. Please check your direct messages on Discord to verify your application. Make sure your direct messages are open to receive notifications regarding your application status.';
+        statusElement.innerText = 'Your application is sent and is now pending verification. Please check your direct messages on Discord to verify your application. Make sure your direct messages are open to receive notifications regarding your application status.';
         statusElement.style.color = 'rgb(76, 175, 80)';
 
         document.getElementById('applicationForm').reset();
