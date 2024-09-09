@@ -19,7 +19,7 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     .then(response => response.text())
     .then(result => {
         const statusElement = document.getElementById('status');
-        statusElement.innerText = 'Your application has been successfully submitted! Please check your direct messages on Discord for updates on your application status. Make sure your direct messages are open to receive notifications.';
+        statusElement.innerText = 'Your application is pending verification. Please check your direct messages on Discord to verify your application. Make sure your direct messages are open to receive notifications regarding your application status.';
         statusElement.style.color = 'rgb(76, 175, 80)';
 
         document.getElementById('applicationForm').reset();
@@ -36,6 +36,6 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
 
         setTimeout(() => {
             statusElement.innerText = '';
-        }, 10000);
+        }, 30000);
     });
 });
