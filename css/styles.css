@@ -720,6 +720,11 @@ button:hover {
         box-sizing: border-box;
     }
 
+    .discord-link {
+        height: 15px;
+        padding: 5px;
+    }
+
     .squadron {
         position: relative;
         background-color: #2B2D31;
