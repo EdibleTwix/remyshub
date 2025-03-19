@@ -45,70 +45,70 @@
 
         <!--TWIX-->
         <div class="squadron" id="twix-squadron">
-            <h3 style="color: #1e8b34;">TWIX</h3>
+            <h3 style="color: #00af23;">TWIX</h3>
             <div class="squadron-item">
                 <div>Members:</div>
-                <span id="twix-membership-count">127 / 128</span>
+                <span id="twix-membership-count"></span>
             </div>
             <div class="squadron-item">
                 <div>Application Acceptance:</div>
-                <span id="twix-application" style="color: #ff0000;">▼</span>
+                <span id="twix-application"></span>
             </div>
-            <span class="hint-icon" title="Few open spots available, high application demand.">‎ ? ‎</span>
+            <span class="hint-icon" id="twix-hint" title="">‎ ? ‎</span>
             <div class="squadron-item">
                 <div>Activity:</div>
-                <span id="twix-squadron-activity">265K</span>
+                <span id="twix-squadron-activity"></span>
             </div>
             <br>
             <div class="squadron-item">
                 <div>Last Updated:</div>
-                <span id="twix-last-updated">14 February 2025</span>
+                <span id="twix-last-updated"></span>
             </div>
         </div>
     
         <!--MLKY-->
         <div class="squadron" id="mlky-squadron">
-            <h3 style="color: #206694;">MLKY</h3>
+            <h3 style="color: #001d9c;">MLKY</h3>
             <div class="squadron-item">
                 <div>Members:</div>
-                <span id="mlky-membership-count">122 / 128</span>
+                <span id="mlky-membership-count"></span>
             </div>
             <div class="squadron-item">
                 <div>Application Acceptance:</div>
-                <span id="mlky-application" style="color: #4CAF50;">▲</span>
+                <span id="mlky-application"></span>
             </div>
-            <span class="hint-icon" title="More open spots available, low application demand.">‎ ? ‎</span>
+            <span class="hint-icon" id="mlky-hint" title="">‎ ? ‎</span>
             <div class="squadron-item">
                 <div>Activity:</div>
-                <span id="mlky-squadron-activity">145K</span>
+                <span id="mlky-squadron-activity"></span>
             </div>
             <br>
             <div class="squadron-item">
                 <div>Last Updated:</div>
-                <span id="mlky-last-updated">14 February 2025</span>
+                <span id="mlky-last-updated"></span>
             </div>
         </div>
     
         <!--MARZ-->
         <div class="squadron" id="marz-squadron">
-            <h3 style="color: #E74C3C;">MARZ</h3>
+            <h3 style="color: #970101;">MARZ</h3>
             <div class="squadron-item">
                 <div>Members:</div>
-                <span id="marz-membership-count">97 / 128</span>
+                <span id="marz-membership-count"></span>
             </div>
             <div class="squadron-item">
                 <div>Application Acceptance:</div>
-                <span id="marz-application" style="color: #4CAF50;">▲</span>
+                <span id="marz-application"></span>
             </div>
-            <span class="hint-icon" title="More open spots available, low application demand.">‎ ? ‎</span>
+            <span class="hint-icon" id="marz-hint" title="">‎ ? ‎</span>
             <div class="squadron-item">
                 <div>Activity:</div>
-                <span id="marz-squadron-activity">64.3K</span>
+                <span id="marz-squadron-activity"></span>
             </div>
             <br>
             <div class="squadron-item">
                 <div>Last Updated:</div>
-                <span id="marz-last-updated">14 February 2025</span>
+                <span id="marz-last-updated"></span>
             </div>
         </div>
     
@@ -117,21 +117,21 @@
             <h3 style="color: #3498DB;">BNTY</h3>
             <div class="squadron-item">
                 <div>Members:</div>
-                <span id="bnty-membership-count">127 / 128</span>
+                <span id="bnty-membership-count"></span>
             </div>
             <div class="squadron-item">
                 <div>Application Acceptance:</div>
-                <span id="bnty-application" style="color: #4CAF50;">✔</span>
+                <span id="bnty-application"></span>
             </div>
-            <span class="hint-icon" title="Open squadron, free to join!">‎ ? ‎</span>
+            <span class="hint-icon" id="bnty-hint" title="">‎ ? ‎</span>
             <div class="squadron-item">
                 <div>Activity:</div>
-                <span id="bnty-squadron-activity">71.2K</span>
+                <span id="bnty-squadron-activity"></span>
             </div>
             <br>
             <div class="squadron-item">
                 <div>Last Updated:</div>
-                <span id="bnty-last-updated">14 February 2025</span>
+                <span id="bnty-last-updated"></span>
             </div>
         </div>
     </div>
@@ -157,7 +157,37 @@
           document.getElementById('footer-container').innerHTML = data;
         });
     </script>
-    
 
+    <script>
+        fetch('squadron_information.json')
+            .then(response => response.json())
+            .then(data => {
+                Object.keys(data).forEach(squadron => {
+                    document.getElementById(`${squadron}-membership-count`).textContent = `${data[squadron].members} / 128`;
+                    
+                    const applicationElement = document.getElementById(`${squadron}-application`);
+                    const hintElement = document.getElementById(`${squadron}-hint`);
+
+                    if (data[squadron].acceptance === true) {
+                        applicationElement.textContent = '▲';
+                        applicationElement.style.color = '#4CAF50';
+                        hintElement.title = "This squadron is accepting new members.";
+                    } else if (data[squadron].acceptance === false) {
+                        applicationElement.textContent = '▼';
+                        applicationElement.style.color = '#FF0000';
+                        hintElement.title = "This squadron is not accepting new members.";
+                    } else if (data[squadron].acceptance === "full") {
+                        applicationElement.textContent = '✕';
+                        applicationElement.style.color = '#FF0000';
+                        hintElement.title = "This squadron is full and not accepting applications.";
+                    }
+
+                    document.getElementById(`${squadron}-squadron-activity`).textContent = `${data[squadron].activity}K`;
+                    document.getElementById(`${squadron}-last-updated`).textContent = data[squadron].lastUpdated;
+                });
+            })
+            .catch(error => console.error('Error loading squadron data:', error));
+    </script>
+            
 </body>
 </html>

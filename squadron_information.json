@@ -1,0 +1,26 @@
+{
+    "twix": {
+        "members": 127,
+        "acceptance": false,
+        "activity": "246",
+        "lastUpdated": "18 March 2025"
+    },
+    "mlky": {
+        "members": 121,
+        "acceptance": true,
+        "activity": "139",
+        "lastUpdated": "18 March 2025"
+    },
+    "marz": {
+        "members": 96,
+        "acceptance": true,
+        "activity": "68.2",
+        "lastUpdated": "18 March 2025"
+    },
+    "bnty": {
+        "members": 128,
+        "acceptance": "full",
+        "activity": "108",
+        "lastUpdated": "18 March 2025"
+    }
+}
