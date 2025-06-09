@@ -1,26 +1,26 @@
 {
     "twix": {
-        "members": 127,
+        "members": 126,
         "acceptance": false,
-        "activity": "246",
-        "lastUpdated": "18 March 2025"
+        "activity": "141",
+        "lastUpdated": "9 June 2025"
     },
     "mlky": {
-        "members": 121,
+        "members": 118,
         "acceptance": true,
-        "activity": "139",
-        "lastUpdated": "18 March 2025"
+        "activity": "143",
+        "lastUpdated": "9 June 2025"
     },
     "marz": {
-        "members": 96,
+        "members": 93,
         "acceptance": true,
-        "activity": "68.2",
-        "lastUpdated": "18 March 2025"
+        "activity": "69.5",
+        "lastUpdated": "9 June 2025"
     },
     "bnty": {
         "members": 128,
         "acceptance": "full",
-        "activity": "108",
-        "lastUpdated": "18 March 2025"
+        "activity": "121",
+        "lastUpdated": "9 June 2025"
     }
 }
