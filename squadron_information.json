@@ -1,26 +1,27 @@
 {
     "twix": {
-        "members": 126,
-        "acceptance": false,
-        "activity": "141",
-        "lastUpdated": "9 June 2025"
+        "members": 125,
+        "acceptance": true,
+        "activity": "220",
+        "lastUpdated": "14 August 2025"
+    },
+        "marz": {
+        "members": 73,
+        "acceptance": true,
+        "activity": "73.3",
+        "lastUpdated": "14 August 2025"
     },
     "mlky": {
-        "members": 118,
-        "acceptance": true,
-        "activity": "143",
-        "lastUpdated": "9 June 2025"
-    },
-    "marz": {
-        "members": 93,
-        "acceptance": true,
-        "activity": "69.5",
-        "lastUpdated": "9 June 2025"
-    },
-    "bnty": {
-        "members": 128,
+        "members": 69,
         "acceptance": "full",
-        "activity": "121",
-        "lastUpdated": "9 June 2025"
+        "activity": "120k",
+        "lastUpdated": "14 August 2025"
+    },
+
+    "bnty": {
+        "members": 88,
+        "acceptance": "full",
+        "activity": "145",
+        "lastUpdated": "14 August 2025"
     }
 }
